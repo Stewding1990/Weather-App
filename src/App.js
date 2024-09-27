@@ -39,6 +39,7 @@ function App() {
       case 'snow':
         return 'url("/images/weather/snow.jpg")';
       case 'mist':
+      case 'fog':
         return 'url("/images/weather/mist.jpg")';
       default:
         return 'url("/images/weather/default.jpg")'; // Default image for rare conditions
