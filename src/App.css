@@ -1,0 +1,117 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #87ceeb, #fff);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10px; /* Small padding for mobile sides */
+  background-size: cover; /* Ensures the gradient covers the entire body */
+}
+
+/* Main App Container */
+.App {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Max width to limit the size on large screens */
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;  /* Full width */
+  margin-bottom: 10px;
+  box-sizing: border-box;  /* Ensures padding is included in the width */
+  font-size: 1em;
+}
+
+/* Search Button */
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Weather Info */
+.weather-info {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.weather-info h2 {
+  margin: 10px 0;
+}
+
+.weather-info p {
+  margin: 5px 0;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  body {
+    padding: 0 20px; /* Increase side padding for tablets/mobile */
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .App {
+    padding: 15px;
+  }
+
+  .weather-info {
+    font-size: 1.1em; /* Slightly smaller text for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6em;
+  }
+
+  input[type="text"], button {
+    font-size: 0.9em; /* Smaller font for small screens */
+  }
+
+  .weather-info {
+    font-size: 1em;
+  }
+}
+
+/* Additional Background Image Styles */
+body {
+  background-repeat: no-repeat; /* Prevents tiling of the image */
+  background-position: center; /* Centers the image */
+}
+
+/* To apply to specific weather conditions */
+.clear { background-image: url("/public/images/weather/clear.jpg"); background-size: cover; }
+.clouds { background-image: url('/public/images/weather/clouds.jpg'); background-size: cover; }
+.rain { background-image: url('/public/images/weather/rain.jpg'); background-size: cover; }
+.snow { background-image: url('/public/images/weather/snow.jpg'); background-size: cover; }
+.default { background-image: url('/public/images/weather/default.jpg'); background-size: cover; }
